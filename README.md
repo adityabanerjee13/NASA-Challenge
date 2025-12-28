@@ -43,6 +43,12 @@ python yolo_ellipse/predict.py --model runs/train/crater_obb/weights/best.pt --s
 | ![Original 2](visualizations/orientation10_light02.png) | ![Prediction 2](visualizations/sample_2_orientation10_light02.png) |
 | ![Original 3](visualizations/orientation01_light04.png) | ![Prediction 3](visualizations/sample_3_orientation01_light04.png) |
 
+### Ground Truth vs Prediction Comparison
+
+![GT vs Prediction](visualizations/gt_vs_pred_comparison.png)
+
+*Left: Ground Truth (cyan) | Middle: Predictions (red) | Right: Overlay comparison*
+
 ## Output Format
 
 CSV with columns: `ellipseCenterX(px), ellipseCenterY(px), ellipseSemimajor(px), ellipseSemiminor(px), ellipseRotation(deg), inputImage, crater_classification`
