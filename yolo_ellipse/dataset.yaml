@@ -1,0 +1,21 @@
+# NASA Crater Detection Dataset Configuration for YOLO OBB
+# This file should be updated with the actual path after running convert_to_yolo_obb.py
+
+# Dataset root directory (update this path after conversion)
+path: ../yolo_dataset
+
+# Train/val/test splits (relative to 'path')
+train: images/train
+val: images/val
+
+# Class names for crater classification
+# Original values 2,3,4 are mapped to 0,1,2
+names:
+  0: crater_class_0
+  1: crater_class_1
+  2: crater_class_2
+  3: crater_class_3
+  4: crater_class_4
+
+# Number of classes
+nc: 3
