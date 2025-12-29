@@ -25,7 +25,7 @@ python yolo_ellipse/train_with_dataloader.py --prepare-only
 
 ### 3. Train Model (CPU)
 ```bash
-python yolo_ellipse/train_with_dataloader.py --device cpu --batch 16 --workers 16 --epochs 100
+python yolo_ellipse/train_with_dataloader.py --skip-prepare
 ```
 
 ### 4. Run Inference
@@ -35,19 +35,23 @@ python yolo_ellipse/predict.py --model runs/train/crater_obb/weights/best.pt --s
 
 ## Results
 
-### Sample Predictions
+### Ground Truth(Validation set) vs Prediction Comparison
+
+![GT vs Prediction](visualizations/gt_vs_pred_comparison.png)
+
+*Left: Ground Truth (cyan) | Middle: Predictions (red) | Right: Overlay comparison*
+
+### Final training results
+
+![Training Results](runs/train/crater_obb_11n/results.png)
+
+### Sample Predictions(Test set)
 
 | Original Image | Prediction |
 |----------------|------------|
 | ![Original 1](visualizations/orientation05_light02.png) | ![Prediction 1](visualizations/sample_1_orientation05_light02.png) |
 | ![Original 2](visualizations/orientation10_light02.png) | ![Prediction 2](visualizations/sample_2_orientation10_light02.png) |
 | ![Original 3](visualizations/orientation01_light04.png) | ![Prediction 3](visualizations/sample_3_orientation01_light04.png) |
-
-### Ground Truth vs Prediction Comparison
-
-![GT vs Prediction](visualizations/gt_vs_pred_comparison.png)
-
-*Left: Ground Truth (cyan) | Middle: Predictions (red) | Right: Overlay comparison*
 
 ## Output Format
 
